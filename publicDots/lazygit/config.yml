@@ -1,5 +1,7 @@
 # ~/.config/lazygit/config.yml
 
+# promptToReturnFromSubprocess: false
+
 gui:
   theme:
     activeBorderColor:

@@ -5,7 +5,7 @@ macos-titlebar-style = hidden
 window-padding-balance = true
 
 background-opacity = 0.9
-# background-blur = true
+background-blur = true
 
 mouse-hide-while-typing = true
 
