@@ -14,6 +14,7 @@ $HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/
 $HOME/MARYKATEMAS/
 $HOME/Active/
 $HOME/Inactive/
+$HOME/dots/
 "
 
 EXCLUDES="

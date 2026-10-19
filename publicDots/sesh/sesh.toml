@@ -9,3 +9,7 @@ path = "~/Active"
 [[session]]
 name = "Inactive"
 path = "~/Inactive"
+
+[[session]]
+name = "† graveyard †"
+path = "~/.local/share/graveyard"

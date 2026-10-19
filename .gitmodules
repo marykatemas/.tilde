@@ -1,0 +1,3 @@
+[submodule "publicDots/tmux/oh-my-tmux"]
+	path = publicDots/tmux/oh-my-tmux
+	url = https://github.com/marykatemas/.tmux.git
