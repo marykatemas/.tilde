@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SB_DIR="$(dirname "$0")"
+SB=/opt/homebrew/bin/sketchybar
+
+pkill -f "$SB_DIR/media.py stream" 2>/dev/null || true
+
+"$SB" --bar \
+	topmost=window \
+	height=39 \
+	notch_width=220 \
+	color=0x00000000 \
+	drawing=off
+
+"$SB" --default \
+	icon.font="Symbols Nerd Font:Regular:13.5" \
+	label.font="SF Pro:Medium:13.5" \
+	blur_radius=10 \
+	icon.padding_left=7 \
+	icon.padding_right=7 \
+	label.padding_right=7 \
+	background.color=0x01ffffff \
+	background.border_color=0x2ea78bfa \
+	background.border_width=1 \
+	background.corner_radius=4 \
+	background.height=24 \
+	drawing=off
+
+"$SB" --add item media q \
+	--set media display=1 background.padding_right=52
+"$SB" --add item media_center center \
+	--set media_center display=2,3,4,5,6,7,8,9 y_offset=5
+
+nohup /usr/bin/python3 "$SB_DIR/media.py" stream >/dev/null 2>&1 &

@@ -1,0 +1,2 @@
+/privateDots/** filter=git-crypt diff=git-crypt
+/otherConfigs/** filter=git-crypt diff=git-crypt

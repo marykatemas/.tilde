@@ -1,0 +1,17 @@
+theme = "terminal"                  # any built-in theme id, auto, or custom
+mode = "split"                      # auto, split, unified
+vcs = "git"                         # git, jj, sl
+watch = false
+exclude_untracked = false
+line_numbers = true
+tab_width = 4                       # tab stops, 1-16
+file_gap = 1                        # rows between files, including the ─ rule; 0 hides it
+hunk_gap = 0                        # blank rows before later hunks
+wheel_scroll_lines = "auto"         # auto acceleration, or a fixed 1-10 rows per event
+wrap_lines = false
+menu_bar = true
+animations = false
+sidebar = "auto"                    # "auto", true, false
+agent_notes = true
+prompt_save_view_preferences = true
+transparent_background = true

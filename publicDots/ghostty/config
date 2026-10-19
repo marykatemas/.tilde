@@ -1,0 +1,20 @@
+command = /etc/profiles/per-user/$USER/bin/nu
+
+macos-titlebar-style = hidden
+
+window-padding-balance = true
+
+background-opacity = 0.9
+# background-blur = true
+
+mouse-hide-while-typing = true
+
+font-family = Ioskeley Mono
+font-size = 15
+font-thicken = true
+font-thicken-strength = 128
+
+theme = oxocarbon-black-bg
+
+# custom-shader = ./shaders/in-game-crt-cursor.glsl
+# custom-shader = ./shaders/space.glsl

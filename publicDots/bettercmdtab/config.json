@@ -1,0 +1,29 @@
+{
+  "$schema" : "schema.json",
+  "animationsEnabled" : false,
+  "appExceptions" : [
+    {
+      "bundleID" : "com.apple.finder",
+      "hide" : "whenNoWindows",
+      "ignore" : "never"
+    }
+  ],
+  "displayMode" : "activeWindow",
+  "fontScale" : "extraLarge",
+  "gridMaxColumns" : 0,
+  "gridSingleRow" : true,
+  "hideFromScreenSharing" : true,
+  "hideMenuBarIcon" : true,
+  "layoutMode" : "iconDock",
+  "listWidthPercent" : 100,
+  "nextScopedShortcutID" : 0,
+  "panelAppearance" : "system",
+  "panelCornerRadius" : -1,
+  "panelOpacity" : 100,
+  "panelScalePercent" : 75,
+  "previewTitleAlignment" : "center",
+  "scopedShortcutList" : [
+
+  ],
+  "titleTruncationMode" : "middle"
+}

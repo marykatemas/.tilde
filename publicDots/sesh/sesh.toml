@@ -1,0 +1,11 @@
+[[session]]
+name = "MARYKATEMAS"
+path = "~/MARYKATEMAS"
+
+[[session]]
+name = "Active"
+path = "~/Active"
+
+[[session]]
+name = "Inactive"
+path = "~/Inactive"
