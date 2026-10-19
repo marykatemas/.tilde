@@ -70,6 +70,6 @@ symlink "$HOME/dots/publicDots/direnv" "$HOME/.config/direnv"
 symlink "$HOME/dots/publicDots/sesh" "$HOME/.config/sesh"
 
 symlink "$HOME/dots/privateDots/obsidian-wiki" "$HOME/.config/obsidian-wiki"
-symlink "$HOME/dots/privateDots/git/.gitconfig" "$HOME/.gitconfig"
+symlink "$HOME/dots/privateDots/SSH/config" "$HOME/.ssh/config"
 
 symlink "$HOME/dots/Wallpapers" "$HOME/Wallpapers"

@@ -1,4 +1,4 @@
-command = /etc/profiles/per-user/$USER/bin/nu
+command = /etc/profiles/per-user/$USER/bin/nu -l
 
 macos-titlebar-style = hidden
 

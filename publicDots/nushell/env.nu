@@ -42,4 +42,6 @@ path add ("/etc/profiles/per-user" | path join (whoami) "bin")
 
 # path add ($env.HOME | path join ".orbstack" "bin")
 
+$env.SSH_AUTH_SOCK = ($env.HOME | path join ".bitwarden-ssh-agent.sock")
+
 source scripts/init/init.nu
