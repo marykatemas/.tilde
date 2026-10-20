@@ -11,7 +11,7 @@ name = "Inactive"
 path = "~/Inactive"
 
 [[session]]
-name = ".tilde"
+name = "_tilde"
 path = "~/.tilde"
 
 [[session]]

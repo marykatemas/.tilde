@@ -442,6 +442,9 @@ bind-key -n C-S-n swap-window -t +1\; select-window -t +1
 
 bind v split-window -h -c '#{pane_current_path}'
 
+set -g popup-style default
+set -g popup-border-style default
+
 bind-key g switch-client -T git
 bind-key -T git g display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'lazygit'
 bind-key -T git l display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'lazygit log'
@@ -473,8 +476,8 @@ bind-key "s" run-shell "sesh connect \"$(
 # increase history size
 set -g history-limit 250000
 
-# start with mouse mode enabled
-#set -g mouse on
+# start with mouse mode disabled (tmux 3.8 enables mouse by default)
+set -g mouse off
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
