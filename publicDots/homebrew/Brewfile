@@ -5,8 +5,6 @@ tap "nikitabobko/tap"
 tap "oven-sh/bun"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Client library for huggingface.co hub
 brew "hf"
 # Review-first terminal diff viewer for agent-authored changesets
@@ -113,7 +111,8 @@ cask "vorssaint"
 mas "Happ", id: 6504287215
 mas "uBlock Origin Lite", id: 6745342698
 mas "Vimari", id: 1480933944
-go "github.com/wailsapp/wails/v2/cmd/wails"
+go "cmd/go"
+go "cmd/gofmt"
 uv "obsidian-wiki"
 npm "@colbymchenry/codegraph"
 npm "@fission-ai/openspec"

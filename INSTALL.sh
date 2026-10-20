@@ -21,26 +21,26 @@ if ! command -v nix; then
 	. "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
 fi
 
-if [[ -e ~/dots ]]; then
-	mv ~/dots ~/dots.bak."$(date +%Y%m%d-%H%M%S)"
+if [[ -e ~/.tilde ]]; then
+	mv ~/.tilde ~/.tilde.bak."$(date +%Y%m%d-%H%M%S)"
 fi
 
 nix shell nixpkgs#git nixpkgs#git-crypt --command bash -c '
 cd ~/. &&
-git clone https://github.com/marykatemas/dots.git &&
-cd ~/dots/. &&
+git clone https://github.com/marykatemas/.tilde.git ~/.tilde &&
+cd ~/.tilde/. &&
 read -r -p "Enter absolute path to git-crypt key: " KEY < /dev/tty &&
 git-crypt unlock "$KEY" &&
 git submodule update --init --recursive
 '
 
-bash ~/dots/scripts/symlinks.sh
+bash ~/.tilde/scripts/symlinks.sh
 
 if [[ "$(uname -s)" == Darwin ]]; then
-	sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dots/nix#Shibazaki
-	# brew bundle install --file ~/dots/publicDots/homebrew/Brewfile
+	sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.tilde/nix#Shibazaki
+	# brew bundle install --file ~/.tilde/publicDots/homebrew/Brewfile
 else
-	nix run home-manager/master -- switch --flake ~/dots/nix#Larptop
+	nix run home-manager/master -- switch --flake ~/.tilde/nix#Larptop
 fi
 
 mkdir -p "$HOME/MARYKATEMAS"

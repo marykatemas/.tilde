@@ -1,4 +1,5 @@
 [tools]
 rust = "stable"
+go = "latest"
 foundry = "latest"
 solidity = "latest"

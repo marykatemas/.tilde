@@ -80,9 +80,9 @@ alias bo = brew outdated
 alias buf = brew upgrade --formula
 alias buc = brew upgrade --cask
 alias brewfile = brew bundle dump --force --file=~/.config/homebrew/Brewfile
-alias nfu = nix flake update --flake ~/dots/nix/
-alias drs = sudo darwin-rebuild switch --flake ~/dots/nix#Shibazaki
-alias hms = home-manager switch --flake ~/dots/nix#Larptop
+alias nfu = nix flake update --flake ~/.tilde/nix/
+alias drs = sudo darwin-rebuild switch --flake ~/.tilde/nix#Shibazaki
+alias hms = home-manager switch --flake ~/.tilde/nix#Larptop
 alias mkm = cd ~/MARYKATEMAS/
 alias wm = workmux
 alias k = kubectl
