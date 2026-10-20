@@ -74,10 +74,12 @@ alias lzg = lazygit
 alias lzd = lazydocker
 alias oc = opencode
 alias ghd = gh dash
-alias brewfile = brew bundle dump --force --file=~/.config/homebrew/Brewfile
+alias mo = mise outdated
+alias mu = mise upgrade
 alias bo = brew outdated
 alias buf = brew upgrade --formula
 alias buc = brew upgrade --cask
+alias brewfile = brew bundle dump --force --file=~/.config/homebrew/Brewfile
 alias nfu = nix flake update --flake ~/dots/nix/
 alias drs = sudo darwin-rebuild switch --flake ~/dots/nix#Shibazaki
 alias hms = home-manager switch --flake ~/dots/nix#Larptop

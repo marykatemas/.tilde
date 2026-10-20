@@ -27,8 +27,6 @@ brew "pre-commit"
 brew "python@3.14"
 # Safe and ergonomic alternative to rm
 brew "rip2"
-# Smart session manager for the terminal
-brew "sesh"
 # Modern and pretty fancy file manager for the terminal
 brew "superfile"
 # Interactive TUI for Homebrew
