@@ -6,7 +6,7 @@ shift + ctrl + alt + cmd - 0 : ~/.config/skhd/scripts/lazydocker.sh
 
 shift + ctrl + alt + cmd - g : ~/.config/skhd/scripts/launch.sh Ghostty
 shift + ctrl + alt + cmd - s : ~/.config/skhd/scripts/launch.sh Safari
-shift + ctrl + alt + cmd - b : ~/.config/skhd/scripts/launch.sh "Brave Browser"
+shift + ctrl + alt + cmd - b : ~/.config/skhd/scripts/launch.sh "Bitwarden"
 shift + ctrl + alt + cmd - t : ~/.config/skhd/scripts/launch.sh Telegram
 shift + ctrl + alt + cmd - o : ~/.config/skhd/scripts/launch.sh Obsidian
 shift + ctrl + alt + cmd - a : ~/.config/skhd/scripts/launch.sh "Activity Monitor"
