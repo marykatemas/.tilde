@@ -7,40 +7,35 @@ SB = "/opt/homebrew/bin/sketchybar"
 MEDIA = "/opt/homebrew/bin/media-control"
 ITEMS = ("media", "media_center")
 
-MAX_ARTIST = 14
-MAX_TITLE = 21
-
 STATES = {
     True: ("􀑪", "0xffa78bfa", "0xf2ffffff"),
     False: ("􀊆", "0x59a78bfa", "0x9effffff"),
 }
 
 
-def cut(text, limit):
-    return text if len(text) <= limit else text[:limit] + "..."
-
-
 def render(line):
     try:
         payload = json.loads(line)["payload"]
-        title = cut(payload.get("title") or "", MAX_TITLE)
-        artist = cut(payload.get("artist") or "", MAX_ARTIST)
+        title = payload.get("title") or ""
+        artist = payload.get("artist") or ""
     except (json.JSONDecodeError, KeyError, TypeError, AttributeError):
         return {"drawing": "off"}
     if not title and not artist:
         return {"drawing": "off"}
-    glyph, glyph_color, label_color = STATES[bool(payload.get("playing"))]
+    playing = bool(payload.get("playing"))
+    glyph, glyph_color, label_color = STATES[playing]
     return {
         "drawing": "on",
         "icon": glyph,
         "icon.color": glyph_color,
-        "label": " / ".join(part for part in (title, artist) if part),
+        "label": " /// ".join(part for part in (title, artist) if part),
         "label.color": label_color,
+        "scroll_texts": "on" if playing else "off",
     }
 
 
 def apply(props):
-    args = [SB]
+    args = [SB, "--animate", "sin", "15"]
     for item in ITEMS:
         args.append("--set")
         args.append(item)

@@ -33,4 +33,6 @@ pkill -f "$SB_DIR/media.py stream" 2>/dev/null || true
 "$SB" --add item media_center center \
 	--set media_center display=2,3,4,5,6,7,8,9 y_offset=5
 
+"$SB" --set /media/ label.max_chars=35
+
 nohup /usr/bin/python3 "$SB_DIR/media.py" stream >/dev/null 2>&1 &
