@@ -420,10 +420,6 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # this is the place to override or undo settings
 
-#                            ╔══════════════════════╗
-#                            ║ OH-MY-TMUX OVERRIDES ║
-#                            ╚══════════════════════╝
-
 set -g default-shell /etc/profiles/per-user/$USER/bin/nu
 
 set -g status-justify absolute-centre

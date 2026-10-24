@@ -3,8 +3,7 @@
     "asmvik/formulae/skhd",
     "felixkratz/formulae/borders",
     "felixkratz/formulae/sketchybar",
-    "hashicorp/tap/terraform",
-    "oven-sh/bun/bun"
+    "hashicorp/tap/terraform"
   ],
   "trustedcasks": [
     "nikitabobko/tap/aerospace"

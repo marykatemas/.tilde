@@ -28,9 +28,7 @@
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 
---        ╔═════════════════════════════════════════════════════════════╗
---        ║ Vim-like HJKL navigation (arrows remain bound as secondary) ║
---        ╚═════════════════════════════════════════════════════════════╝
+-- Vim-like HJKL navigation (arrows remain bound as secondary)
 
 -- Free the base keys that were occupied by non-navigation actions
 hl.unbind("SUPER + J") -- was: Toggle window split

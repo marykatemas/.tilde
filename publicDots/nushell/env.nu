@@ -1,9 +1,7 @@
-#                             ╔═════════════════════╗
-#                             ║       env.nu        ║
-#                             ║                     ║
-#                             ║    Installed by:    ║
-#                             ║ version = "0.115.1" ║
-#                             ╚═════════════════════╝
+# env.nu
+#
+# Installed by:
+# version = "0.116.1"
 #
 # Previously, environment variables were typically configured in `env.nu`.
 # In general, most configuration can and should be performed in `config.nu`
@@ -31,6 +29,8 @@ $env.XDG_DATA_DIRS = "/usr/local/share:/usr/share"
 
 $env.EDITOR = "nvim"
 $env.VISUAL = "nvim"
+
+$env.MANPAGER = "nvim +Man!"
 
 use std "path add"
 path add "/opt/homebrew/sbin"

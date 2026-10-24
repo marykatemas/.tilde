@@ -1,7 +1,5 @@
-#                               ╔════════════════╗
-#                               ║ JETPACK PRESET ║
-#                               ║ version: 1.0.0 ║
-#                               ╚════════════════╝
+# Jetpack Preset
+# version: 1.0.0
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
@@ -364,10 +362,6 @@ unknown_msg = '[◌](bold dimmed yellow)'
 [spack]
 symbol = "◇ "
 format = " spack [$symbol$environment]($style)"
-
-#                                   ╔════════╗
-#                                   ║ EXTRAS ║
-#                                   ╚════════╝
 
 # prints the forge icon (github/gitlab/bitbucket) or generic git host
 [custom.git_host]

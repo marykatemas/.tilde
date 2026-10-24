@@ -42,7 +42,7 @@ return {
 
     wk.add({
       { "<Leader>cb", group = " □  Boxes", mode = mode },
-      { "<Leader>cbb", "<Cmd>CBcabox7<CR>", desc = "Box Title", mode = mode },
+      { "<Leader>cbb", "<Cmd>CBcabox19<CR>", desc = "Box Title", mode = mode },
       { "<Leader>cbt", "<Cmd>CBllline<CR>", desc = "Titled Line", mode = mode },
       { "<Leader>cbl", "<Cmd>CBline<CR>", desc = "Simple Line", mode = mode },
       { "<Leader>cbm", "<Cmd>CBllbox14<CR>", desc = "Marked", mode = mode },

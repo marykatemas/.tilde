@@ -1,9 +1,7 @@
-#                             ╔═════════════════════╗
-#                             ║      config.nu      ║
-#                             ║                     ║
-#                             ║    Installed by:    ║
-#                             ║ version = "0.115.1" ║
-#                             ╚═════════════════════╝
+# config.nu
+#
+# Installed by:
+# version = "0.116.1"
 #
 # This file is used to override default Nushell settings, define
 # (or import) custom commands, or run any other startup tasks.
@@ -44,18 +42,9 @@ def --env y [...args] {
     rm -fp $tmp
 }
 
-def man [page] {
-    nvim $"+Man ($page)" "+only"
-}
-
 def ow [] {
     cd "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian-Wiki/"
     nvim .
-}
-
-def mou [] {
-    mas outdated
-    mas update
 }
 
 def gg [] {
@@ -86,6 +75,7 @@ alias hms = home-manager switch --flake ~/.tilde/nix#Larptop
 alias mkm = cd ~/MARYKATEMAS/
 alias wm = workmux
 alias k = kubectl
+alias tf = terraform
 
 source direnv.nu
 

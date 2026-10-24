@@ -19,10 +19,6 @@ symlink() {
 	echo "  [symlink] $src -> $dst"
 }
 
-#                               ╔═════════════════╗
-#                               ║ CREATE SYMLINKS ║
-#                               ╚═════════════════╝
-
 if [[ "$(uname -s)" == Darwin ]]; then
 	symlink "$HOME/.tilde/publicDots/nushell" "$HOME/Library/Application Support/nushell"
 	symlink "$HOME/.tilde/publicDots/clock-rs" "$HOME/Library/Application Support/clock-rs"
@@ -33,8 +29,9 @@ if [[ "$(uname -s)" == Darwin ]]; then
 	symlink "$HOME/.tilde/publicDots/omniwm" "$HOME/.config/omniwm"
 	symlink "$HOME/.tilde/publicDots/skhd" "$HOME/.config/skhd"
 	symlink "$HOME/.tilde/publicDots/bettercmdtab" "$HOME/.config/bettercmdtab"
+	symlink "$HOME/.tilde/publicDots/karabiner" "$HOME/.config/karabiner"
 else
-	:
+	symlink "$HOME/.tilde/publicDots/clock-rs" "$HOME/.config/clock-rs"
 fi
 
 if command -v omarchy; then
@@ -42,9 +39,8 @@ if command -v omarchy; then
 	symlink "$HOME/.tilde/publicDots/omarchy/hypr" "$HOME/.config/hypr"
 fi
 
-symlink "$HOME/.tilde/publicDots/starship/starship.toml" "$HOME/.config/starship.toml"
 symlink "$HOME/.tilde/publicDots/nushell" "$HOME/.config/nushell"
-symlink "$HOME/.tilde/publicDots/clock-rs" "$HOME/.config/clock-rs"
+symlink "$HOME/.tilde/publicDots/starship/starship.toml" "$HOME/.config/starship.toml"
 symlink "$HOME/.tilde/publicDots/atuin" "$HOME/.config/atuin"
 symlink "$HOME/.tilde/publicDots/btop" "$HOME/.config/btop"
 symlink "$HOME/.tilde/publicDots/gh" "$HOME/.config/gh"
@@ -68,7 +64,6 @@ symlink "$HOME/.tilde/publicDots/superfile" "$HOME/.config/superfile"
 symlink "$HOME/.tilde/publicDots/workmux" "$HOME/.config/workmux"
 symlink "$HOME/.tilde/publicDots/direnv" "$HOME/.config/direnv"
 symlink "$HOME/.tilde/publicDots/sesh" "$HOME/.config/sesh"
-symlink "$HOME/.tilde/publicDots/karabiner" "$HOME/.config/karabiner"
 
 symlink "$HOME/.tilde/privateDots/obsidian-wiki" "$HOME/.config/obsidian-wiki"
 symlink "$HOME/.tilde/privateDots/SSH/config" "$HOME/.ssh/config"

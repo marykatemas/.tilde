@@ -3,8 +3,12 @@ tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "hashicorp/tap"
 tap "nikitabobko/tap"
 tap "oven-sh/bun"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
+# Multi-platform software reverse engineering framework
+brew "ghidra"
 # Client library for huggingface.co hub
 brew "hf"
 # Review-first terminal diff viewer for agent-authored changesets
@@ -35,8 +39,6 @@ brew "taproom"
 brew "transmission-cli"
 # Command-line unarchiving tools supporting multiple formats
 brew "unar"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # Git worktrees + tmux windows for zero-friction parallel dev
 brew "workmux"
 # Simple hotkey-daemon for macOS.
@@ -47,8 +49,6 @@ brew "felixkratz/formulae/borders", trusted: true
 brew "felixkratz/formulae/sketchybar", trusted: true
 # Terraform
 brew "hashicorp/tap/terraform", trusted: true
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
 # Replacement for the built-in Cmd+Tab app switcher
@@ -68,6 +68,8 @@ cask "font-symbols-only-nerd-font"
 cask "ghostty@tip"
 # Reverse engineering tool that lets you disassemble, decompile and debug your app
 cask "hopper-disassembler"
+# Keyboard customiser
+cask "karabiner-elements"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Use Vim in input fields and non input fields

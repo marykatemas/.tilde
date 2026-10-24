@@ -47,10 +47,6 @@ mkdir -p "$HOME/MARYKATEMAS"
 mkdir -p "$HOME/Active"
 mkdir -p "$HOME/Inactive"
 
-#                                 ╔═════════════╗
-#                                 ║ THIRD-PARTY ║
-#                                 ╚═════════════╝
-
 if [[ "$(uname -s)" == Darwin ]]; then
 	if command -v skhd; then
 		skhd --start-service
