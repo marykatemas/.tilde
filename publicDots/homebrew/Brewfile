@@ -68,6 +68,8 @@ cask "font-symbols-only-nerd-font"
 cask "ghostty@tip"
 # Reverse engineering tool that lets you disassemble, decompile and debug your app
 cask "hopper-disassembler"
+# Keyboard customiser
+cask "karabiner-elements"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Use Vim in input fields and non input fields
