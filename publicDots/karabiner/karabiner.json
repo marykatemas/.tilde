@@ -1,6 +1,94 @@
 {
   "profiles": [
     {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "FL Studio: x->f9, b->opt+f8, c->f6, p->f7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "x"
+                },
+                "to": [
+                  {
+                    "key_code": "f9"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.image-line\\.flstudio$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "b"
+                },
+                "to": [
+                  {
+                    "key_code": "f8",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.image-line\\.flstudio$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "key_code": "f6"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.image-line\\.flstudio$"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "p"
+                },
+                "to": [
+                  {
+                    "key_code": "f7"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "^com\\.image-line\\.flstudio$"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
       "devices": [
         {
           "identifiers": {
