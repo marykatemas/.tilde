@@ -68,6 +68,7 @@ symlink "$HOME/.tilde/publicDots/superfile" "$HOME/.config/superfile"
 symlink "$HOME/.tilde/publicDots/workmux" "$HOME/.config/workmux"
 symlink "$HOME/.tilde/publicDots/direnv" "$HOME/.config/direnv"
 symlink "$HOME/.tilde/publicDots/sesh" "$HOME/.config/sesh"
+symlink "$HOME/.tilde/publicDots/karabiner" "$HOME/.config/karabiner"
 
 symlink "$HOME/.tilde/privateDots/obsidian-wiki" "$HOME/.config/obsidian-wiki"
 symlink "$HOME/.tilde/privateDots/SSH/config" "$HOME/.ssh/config"

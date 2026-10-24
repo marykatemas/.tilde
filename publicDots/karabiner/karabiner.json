@@ -1,0 +1,58 @@
+{
+  "profiles": [
+    {
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 65248,
+            "vendor_id": 6645
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 62967,
+            "vendor_id": 13652
+          },
+          "ignore": true
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 65248,
+            "vendor_id": 6645
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_pointing_device": true,
+            "product_id": 62967,
+            "vendor_id": 13652
+          },
+          "ignore": true
+        },
+        {
+          "identifiers": {
+            "is_consumer": true
+          },
+          "ignore": true
+        }
+      ],
+      "name": "master",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}
