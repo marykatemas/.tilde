@@ -86,6 +86,28 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "Right Command -> Hyper",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_command"
+                },
+                "to": [
+                  {
+                    "key_code": "right_command",
+                    "modifiers": [
+                      "left_control",
+                      "left_shift",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
