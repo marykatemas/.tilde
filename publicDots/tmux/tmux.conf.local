@@ -438,6 +438,8 @@ bind-key -n C-S-n swap-window -t +1\; select-window -t +1
 
 bind v split-window -h -c '#{pane_current_path}'
 
+bind S setw synchronize-panes \; display "synchronize-panes: #{?pane_synchronized,on,off}"
+
 set -g popup-style default
 set -g popup-border-style default
 
