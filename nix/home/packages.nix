@@ -48,7 +48,7 @@
     mise
     mtr
     ncdu
-    neovim
+    # neovim
     nushell
     ollama
     ripgrep

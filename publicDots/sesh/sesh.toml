@@ -11,9 +11,5 @@ name = "Inactive"
 path = "~/Inactive"
 
 [[session]]
-name = "~tilde"
-path = "~/.tilde"
-
-[[session]]
 name = "† graveyard †"
 path = "~/.local/share/graveyard"

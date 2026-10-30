@@ -431,10 +431,8 @@ set -g detach-on-destroy off
 
 bind -n C-Enter new-window -c '#{pane_current_path}'
 
-bind -n C-n next-window
 bind -n C-p previous-window
-bind-key -n C-S-p swap-window -t -1\; select-window -t -1
-bind-key -n C-S-n swap-window -t +1\; select-window -t +1
+bind -n C-n next-window
 
 bind v split-window -h -c '#{pane_current_path}'
 

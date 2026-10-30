@@ -68,7 +68,7 @@ worktree_dir: ~/.workmux/{project}
 # Prefix for tmux window and session names. Supports `{project}` for the main
 # worktree's directory name, e.g. `{project} ` to scope session names by repo.
 # Default: "wm-"
-window_prefix: "{project}  "
+window_prefix: "{project}  "
 
 #-------------------------------------------------------------------------------
 # Tmux

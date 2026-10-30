@@ -18,7 +18,6 @@ $username\
 $character"""
 
 right_format = """
-${custom.git_worktree}\
 $singularity\
 $kubernetes\
 $directory\
@@ -362,31 +361,3 @@ unknown_msg = '[◌](bold dimmed yellow)'
 [spack]
 symbol = "◇ "
 format = " spack [$symbol$environment]($style)"
-
-# prints the forge icon (github/gitlab/bitbucket) or generic git host
-[custom.git_host]
-command = """
-let remote_url = (^git ls-remote --get-url | complete | get stdout)
-if ($remote_url | str contains "github") { "" } else if ($remote_url | str contains "gitlab") { "" } else if ($remote_url | str contains "bitbucket") { "" } else if ($remote_url | str contains "git") { "" } else { "" }
-"""
-shell = ["nu", "-c"]
-when = true
-format = "([ $output]($style))"
-style = "white"
-require_repo = true
-ignore_timeout = true
-
-# prints a marker when the repo is a linked worktree
-# pairs well with workmux (git worktrees + tmux windows for zero-friction parallel dev)
-[custom.git_worktree]
-command = """
-let git_common_dir = (^git rev-parse --path-format=absolute --git-common-dir | complete | get stdout)
-let git_dir = (^git rev-parse --path-format=absolute --git-dir | complete | get stdout)
-if ($git_common_dir | str trim) != ($git_dir | str trim) { "" }
-"""
-shell = ["nu", "-c"]
-when = true
-format = "([ $output ]($style))"
-style = "green"
-require_repo = true
-ignore_timeout = true
