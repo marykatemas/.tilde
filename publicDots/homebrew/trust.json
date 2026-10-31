@@ -6,6 +6,10 @@
     "hashicorp/tap/terraform"
   ],
   "trustedcasks": [
+    "docker/tap/sbx",
     "nikitabobko/tap/aerospace"
+  ],
+  "trustedtaps": [
+    "docker/tap"
   ]
 }

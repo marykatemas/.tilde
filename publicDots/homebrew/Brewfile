@@ -1,4 +1,5 @@
 tap "asmvik/formulae"
+tap "docker/tap", trusted: true
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "hashicorp/tap"
 tap "nikitabobko/tap"
@@ -94,6 +95,8 @@ cask "opensuperwhisper"
 cask "orbstack"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Build, run, and govern agents across the software development lifecycle
+cask "docker/tap/sbx", trusted: true
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # System monitor for the menu bar
