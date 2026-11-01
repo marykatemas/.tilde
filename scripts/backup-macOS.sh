@@ -9,7 +9,7 @@ $HOME/Movies/
 $HOME/Music/
 $HOME/Pictures/
 $HOME/Public/
-$HOME/.local/share/atuin/history.db
+$HOME/.atuin/data/history.db
 $HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/
 $HOME/MARYKATEMAS/
 $HOME/Active/

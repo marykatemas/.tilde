@@ -1,4 +1,4 @@
-# nix-darwin entry point for Shibazaki, the macOS machine.
+# nix-darwin entry point for Larptop, the macOS machine.
 #
 # Wires together the machine identity, its primary user, and the
 # embedded home-manager so a single `darwin-rebuild switch` configures

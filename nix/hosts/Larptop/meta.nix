@@ -1,10 +1,12 @@
 # Machine metadata for Larptop; read by outputs/default.nix.
 #
-# Same contract as the other hosts: darwin = false marks this as a
-# standalone home-manager profile.
+# This file is the discovery contract. Every folder under hosts/ needs
+# one, and the darwin flag decides whether the host becomes a full
+# nix-darwin system (plus home-manager) or a bare home-manager profile.
+# Larptop is the Mac.
 {
-  system = "x86_64-linux"; # nixpkgs system string for this machine
+  system = "aarch64-darwin"; # nixpkgs system string for this machine
   username = "marykatemas";
-  darwin = false; # false => build a homeConfiguration
-  allowUnfree = true; # permit unfree packages
+  darwin = true; # true => build a darwinConfiguration
+  allowUnfree = true; # permit unfree packages, e.g. ollama
 }

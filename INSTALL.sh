@@ -40,16 +40,16 @@ git submodule update --init --recursive
 
 bash ~/.tilde/scripts/symlinks.sh
 
-if [[ "$(uname -s)" == Darwin ]]; then
-	sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.tilde/nix#Shibazaki
-	# brew bundle install --file ~/.tilde/publicDots/homebrew/Brewfile
-else
-	nix run home-manager/master -- switch --flake ~/.tilde/nix#Larptop
-fi
-
 mkdir -p "$HOME/MARYKATEMAS"
 mkdir -p "$HOME/Active"
 mkdir -p "$HOME/Inactive"
+
+if [[ "$(uname -s)" == Darwin ]]; then
+	sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.tilde/nix#Larptop
+	# brew bundle install --file ~/.tilde/publicDots/homebrew/Brewfile
+else
+	nix run home-manager/master -- switch --flake ~/.tilde/nix#Omarchy
+fi
 
 if command -v mise; then
 	mise bootstrap

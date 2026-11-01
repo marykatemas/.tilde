@@ -22,8 +22,8 @@ pkill -f "$SB_DIR/media.py stream" 2>/dev/null || true
 	icon.padding_right=7 \
 	label.padding_right=7 \
 	background.color=0x01ffffff \
-	background.border_color=0x2ea78bfa \
-	background.border_width=1 \
+	background.border_color=0x2e8e8e93 \
+	background.border_width=0 \
 	background.corner_radius=4 \
 	background.height=24 \
 	drawing=off

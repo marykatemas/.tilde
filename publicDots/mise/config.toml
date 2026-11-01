@@ -9,11 +9,10 @@ node = "latest"
 bun = "latest"
 solidity = "latest"
 foundry = "latest"
-neovim = "nightly"
+# neovim = "nightly"
 workmux = "latest"
 superfile = "latest"
 pre-commit = "latest"
 hunk = "latest"
-# "latest" resolves to the GitHub latest release (still 1.x); "2" tracks newest 2.x
-opencode = "2"
+opencode = "2"        # "latest" resolves to the GitHub latest release (still 1.x); "2" tracks newest 2.x
 pi = "latest"

@@ -17,6 +17,7 @@
 
     NSGlobalDomain = {
       AppleInterfaceStyle = "Dark";
+      AppleIconAppearanceTheme = "ClearDark";
       AppleInterfaceStyleSwitchesAutomatically = false;
 
       InitialKeyRepeat = 10;
@@ -110,6 +111,7 @@
       NSGlobalDomain = {
         TISRomanSwitchState = 1;
         "com.apple.mouse.linear" = true;
+        AppleAccentColor = -1;
       };
       # Enable exactly the US and Russian keyboard layouts. The layout IDs
       # are the ones macOS itself uses; 19456 is standard Russian. Hard

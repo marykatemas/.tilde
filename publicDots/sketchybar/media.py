@@ -8,8 +8,8 @@ MEDIA = "/opt/homebrew/bin/media-control"
 ITEMS = ("media", "media_center")
 
 STATES = {
-    True: ("􀑪", "0xffa78bfa", "0xf2ffffff"),
-    False: ("􀊆", "0x59a78bfa", "0x9effffff"),
+    True: ("􀑪", "0xff8e8e93", "0xf2ffffff"),
+    False: ("􀊆", "0x598e8e93", "0x9effffff"),
 }
 
 
