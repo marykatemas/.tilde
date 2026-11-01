@@ -3,45 +3,26 @@ tap "docker/tap", trusted: true
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "hashicorp/tap"
 tap "nikitabobko/tap"
-tap "oven-sh/bun"
-# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
-brew "bun"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
 # Multi-platform software reverse engineering framework
 brew "ghidra"
 # Client library for huggingface.co hub
 brew "hf"
-# Review-first terminal diff viewer for agent-authored changesets
-brew "hunk"
-# Cross-platform software keyboard remapper for Linux, macOS and Windows
-brew "kanata"
 # Mac App Store command-line interface
 brew "mas"
 # Control and observe media playback from the command-line
 brew "media-control"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# AI coding agent, built for the terminal
-brew "opencode"
-# AI agent toolkit
-brew "pi-coding-agent"
-# Framework for managing multi-language pre-commit hooks
-brew "pre-commit"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
 # Safe and ergonomic alternative to rm
 brew "rip2"
-# Modern and pretty fancy file manager for the terminal
-brew "superfile"
 # Interactive TUI for Homebrew
 brew "taproom"
 # Lightweight BitTorrent client
 brew "transmission-cli"
 # Command-line unarchiving tools supporting multiple formats
 brew "unar"
-# Git worktrees + tmux windows for zero-friction parallel dev
-brew "workmux"
 # Simple hotkey-daemon for macOS.
 brew "asmvik/formulae/skhd", trusted: true
 # A window border system for macOS
@@ -58,8 +39,6 @@ cask "bettercmdtab"
 cask "betterdisplay"
 # Desktop password and login vault
 cask "bitwarden"
-# Tool to show live information about the batteries in various devices
-cask "coconutbattery"
 # Voice and text chat software
 cask "discord"
 cask "font-ioskeley-mono"
@@ -77,10 +56,6 @@ cask "keycastr"
 cask "kindavim"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
-# Desktop sync client for Nextcloud software products
-cask "nextcloud"
-# Official Nextcloud Talk Desktop client
-cask "nextcloud-talk"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -119,6 +94,4 @@ mas "Vimari", id: 1480933944
 go "cmd/go"
 go "cmd/gofmt"
 uv "obsidian-wiki"
-npm "@colbymchenry/codegraph"
 npm "@fission-ai/openspec"
-npm "corepack"

@@ -76,8 +76,8 @@
     yq
     zoxide
     zsh
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    # zsh-autosuggestions
+    # zsh-syntax-highlighting
     nixfmt
     unzip
     restic

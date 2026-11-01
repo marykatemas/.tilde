@@ -12,6 +12,10 @@ if [[ "$(uname -s)" == Darwin ]]; then
 	if ! command -v brew; then
 		sudo -v
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		for rc in ~/.zshrc ~/.bashrc; do
+			grep -q 'brew shellenv' "$rc" 2>/dev/null ||
+				echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>"$rc"
+		done
 		eval "$(/opt/homebrew/bin/brew shellenv)"
 	fi
 	brew analytics off
@@ -47,6 +51,11 @@ mkdir -p "$HOME/MARYKATEMAS"
 mkdir -p "$HOME/Active"
 mkdir -p "$HOME/Inactive"
 
+if command -v mise; then
+	mise bootstrap
+	export PATH="$HOME/.local/share/mise/shims:$PATH"
+fi
+
 if [[ "$(uname -s)" == Darwin ]]; then
 	if command -v skhd; then
 		skhd --start-service
@@ -63,10 +72,6 @@ if [[ "$(uname -s)" == Darwin ]]; then
 	if [[ -d /Applications/TeamSpeak.app ]]; then
 		sudo xattr -r -d com.apple.quarantine /Applications/TeamSpeak.app
 	fi
-fi
-
-if command -v mise; then
-	mise install
 fi
 
 if command -v gh; then

@@ -1,6 +1,19 @@
+[bootstrap.mise_shell_activate]
+zsh = true
+bash = true
+
 [tools]
 rust = "stable"
 go = "latest"
-foundry = "latest"
+node = "latest"
+bun = "latest"
 solidity = "latest"
+foundry = "latest"
 neovim = "nightly"
+workmux = "latest"
+superfile = "latest"
+pre-commit = "latest"
+hunk = "latest"
+# "latest" resolves to the GitHub latest release (still 1.x); "2" tracks newest 2.x
+opencode = "2"
+pi = "latest"
