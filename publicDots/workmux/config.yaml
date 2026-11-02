@@ -56,7 +56,7 @@ theme: graphite-code
 # and `{project}` for the main worktree's directory name, so a global config
 # can namespace each repo, e.g. `~/.workmux/{project}`.
 # Default: Sibling directory '<project>__worktrees'.
-worktree_dir: ~/.workmux/{project}
+# worktree_dir: .worktrees
 
 # Strategy for deriving names from branch names.
 # Options: full (default), basename (part after last '/').
@@ -195,7 +195,7 @@ agent: opencode
 # Files
 #-------------------------------------------------------------------------------
 
-# File operations when creating a worktree.
+# File operations when creating a local worktree.
 # files:
 #   # Files to copy (useful for .env files that need to be unique).
 #   copy:
@@ -207,6 +207,15 @@ agent: opencode
 #   symlink:
 #     - "<global>"
 #     - node_modules
+
+# Supplemental uploads for remote workspaces. No files are sent by default.
+# Uses the same glob and "<global>" conventions as files, independently.
+# remote_files:
+#   copy:
+#     - CLAUDE.local.md
+#   # Sources are seeded once and shared remotely, not synchronized.
+#   symlink:
+#     - shared-data
 
 #-------------------------------------------------------------------------------
 # Dashboard

@@ -1,5 +1,6 @@
 tap "asmvik/formulae"
 tap "docker/tap", trusted: true
+tap "erickochen/purple"
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "hashicorp/tap"
 tap "nikitabobko/tap"
@@ -13,18 +14,18 @@ brew "hf"
 brew "mas"
 # Control and observe media playback from the command-line
 brew "media-control"
+# Deep clean and optimize your Mac
+brew "mole"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
-# Safe and ergonomic alternative to rm
-brew "rip2"
 # Interactive TUI for Homebrew
 brew "taproom"
 # Lightweight BitTorrent client
 brew "transmission-cli"
-# Command-line unarchiving tools supporting multiple formats
-brew "unar"
 # Simple hotkey-daemon for macOS.
 brew "asmvik/formulae/skhd", trusted: true
+# Open-source terminal SSH manager and SSH config editor
+brew "erickochen/purple/purple", trusted: true
 # A window border system for macOS
 brew "felixkratz/formulae/borders", trusted: true
 # Custom macOS statusbar with shell plugin, interaction and graph support
@@ -95,3 +96,4 @@ go "cmd/go"
 go "cmd/gofmt"
 uv "obsidian-wiki"
 npm "@fission-ai/openspec"
+npm "sqlmux"

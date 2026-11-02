@@ -1,4 +1,4 @@
-# Machine metadata for Omarchy; read by outputs/default.nix.
+# Machine metadata for Omahost; read by outputs/default.nix.
 #
 # Same contract as the other hosts: darwin = false marks this as a
 # standalone home-manager profile.

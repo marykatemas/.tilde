@@ -18,7 +18,7 @@
     direnv
     docker
     docker-compose
-    doggo
+    # doggo
     duf
     dust
     eza
@@ -47,12 +47,10 @@
     lua51Packages.luarocks
     mise
     mtr
-    ncdu
     neovim
     nushell
     ollama
     ripgrep
-    p7zip
     pnpm
     poppler
     procs
@@ -79,7 +77,6 @@
     # zsh-autosuggestions
     # zsh-syntax-highlighting
     nixfmt
-    unzip
     restic
     nufmt
     cliamp
@@ -91,5 +88,9 @@
     herdr
     # yt-dlp
     direnv
+    rip2
+    tork
+    ouch
+    navi
   ];
 }

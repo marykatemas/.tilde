@@ -1,4 +1,4 @@
-# Host-specific home-manager settings for Omarchy (Linux).
+# Host-specific home-manager settings for Omahost (Linux).
 #
 # Applied on top of the shared ../../home modules, the same as every
 # other Linux host.

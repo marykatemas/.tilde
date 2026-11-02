@@ -48,7 +48,7 @@ if [[ "$(uname -s)" == Darwin ]]; then
 	sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.tilde/nix#Larptop
 	# brew bundle install --file ~/.tilde/publicDots/homebrew/Brewfile
 else
-	nix run home-manager/master -- switch --flake ~/.tilde/nix#Omarchy
+	nix run home-manager/master -- switch --flake ~/.tilde/nix#Omahost
 fi
 
 if command -v mise; then

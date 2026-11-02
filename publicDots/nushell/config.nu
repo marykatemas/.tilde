@@ -54,6 +54,21 @@ def gg [] {
     )
 }
 
+def outd [] {
+    if (which mise | is-not-empty) {
+        print "\n=== mise outdated ===\n"
+        mise outdated
+    }
+    if (which brew | is-not-empty) {
+        print "\n=== brew outdated ===\n"
+        brew outdated
+    }
+    if (which mas | is-not-empty) {
+        print "\n=== mas outdated ===\n"
+        mas outdated
+    }
+}
+
 alias v = nvim
 alias c = clear
 alias l = ls --all
@@ -63,15 +78,12 @@ alias lzg = lazygit
 alias lzd = lazydocker
 alias oc = opencode
 alias ghd = gh dash
-alias mo = mise outdated
-alias mu = mise upgrade
-alias bo = brew outdated
 alias buf = brew upgrade --formula
 alias buc = brew upgrade --cask
 alias brewfile = brew bundle dump --force --file=~/.config/homebrew/Brewfile
 alias nfu = nix flake update --flake ~/.tilde/nix/
 alias drs = sudo darwin-rebuild switch --flake ~/.tilde/nix#Larptop
-alias hms = home-manager switch --flake ~/.tilde/nix#Omarchy
+alias hms = home-manager switch --flake ~/.tilde/nix#Omahost
 alias mkm = cd ~/MARYKATEMAS/
 alias wm = workmux
 alias k = kubectl

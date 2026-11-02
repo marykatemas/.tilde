@@ -113,7 +113,7 @@ mouseScrollSpeed = 1.0
 zoom = 1.0
 
 [overview.backdrop]
-alpha = 1.0
+alpha = 0.0
 blue = 0.08
 green = 0.05
 red = 0.05

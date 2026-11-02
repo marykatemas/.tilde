@@ -1,6 +1,7 @@
 {
   "trustedformulae": [
     "asmvik/formulae/skhd",
+    "erickochen/purple/purple",
     "felixkratz/formulae/borders",
     "felixkratz/formulae/sketchybar",
     "hashicorp/tap/terraform"
