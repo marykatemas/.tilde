@@ -67,3 +67,5 @@ symlink "$HOME/.tilde/publicDots/sesh" "$HOME/.config/sesh"
 
 symlink "$HOME/.tilde/privateDots/obsidian-wiki" "$HOME/.config/obsidian-wiki"
 symlink "$HOME/.tilde/privateDots/SSH/config" "$HOME/.ssh/config"
+
+symlink "$HOME/.tilde/Wallpapers" "$HOME/Wallpapers"
