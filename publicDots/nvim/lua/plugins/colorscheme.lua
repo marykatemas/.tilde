@@ -22,6 +22,12 @@ return {
       vim.g.sonokai_style = "default"
     end,
   },
+  -- {
+  --   "wnkz/monoglow.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  -- },
 
   {
     "LazyVim/LazyVim",

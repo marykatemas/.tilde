@@ -47,16 +47,33 @@
 
     dock = {
       autohide = false;
-      orientation = "left";
-      tilesize = 24;
+      orientation = "bottom";
+      tilesize = 32;
 
-      persistent-apps = [];
-      persistent-others = [
-        {folder = "/Users/marykatemas/MARYKATEMAS/";}
-        {folder = "/Users/marykatemas/Active/";}
-        {folder = "/Users/marykatemas/Inactive/";}
+      persistent-apps = [
+        {app = "/System/Applications/iPhone Mirroring.app";}
       ];
-      show-recents = false;
+      persistent-others = [
+        {
+          folder = {
+            path = "/Users/marykatemas/MARYKATEMAS/";
+            showas = "automatic";
+          };
+        }
+        {
+          folder = {
+            path = "/Users/marykatemas/Active/";
+            showas = "automatic";
+          };
+        }
+        {
+          folder = {
+            path = "/Users/marykatemas/Inactive/";
+            showas = "automatic";
+          };
+        }
+      ];
+      show-recents = true;
 
       wvous-tl-corner = 1;
       wvous-tr-corner = 1;

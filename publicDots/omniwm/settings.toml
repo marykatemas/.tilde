@@ -7,7 +7,7 @@ schemaVersion = 4
 
 [appearance]
 mode = "dark"
-tabRailAppIcons = true
+tabRailAppIcons = false
 
 [borders]
 enabled = false
@@ -197,17 +197,17 @@ notificationBadges = "off"
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
 revealHoldMilliseconds = 200.0
-revealModifier = "off"
+revealModifier = "option"
 showAccentHighlights = true
 showFloatingWindows = true
 showItemBackgrounds = true
 showLabels = true
 solidBlackBackground = false
-systemStatsButton = true
-transparentBackground = false
+systemStatsButton = false
+transparentBackground = true
 windowLevel = "popup"
 xOffset = 0.0
-yOffset = -9999.0
+yOffset = 0.0
 
 [workspaceBar.iconOverrides]
 
