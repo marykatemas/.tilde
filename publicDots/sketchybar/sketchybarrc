@@ -33,6 +33,12 @@ pkill -f "$SB_DIR/media.py stream" 2>/dev/null || true
 "$SB" --add item media_center center \
 	--set media_center display=2,3,4,5,6,7,8,9 y_offset=5
 
+"$SB" --add item agent e \
+	--set agent display=1 background.padding_left=52
+"$SB" --add item agent_center center \
+	--set agent_center display=2,3,4,5,6,7,8,9 y_offset=5
+
 "$SB" --set /media/ label.max_chars=35
+"$SB" --set /agent/ drawing=on icon=󰚩 icon.color=0x598e8e93 label=i label.color=0x9effffff
 
 nohup /usr/bin/python3 "$SB_DIR/media.py" stream >/dev/null 2>&1 &
