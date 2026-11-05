@@ -3,7 +3,7 @@
 [user]
 	name = MARYKATEMAS
 	email = 239193958+marykatemas@users.noreply.github.com
-	signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILMf7gcGNXzMdmYbwKDR19RlcO/N5e62JlapBzsMfryc"
+	signingkey = ~/.ssh/ssh-ed25519-github-signing.pub
 
 [init]
 	defaultBranch = master
