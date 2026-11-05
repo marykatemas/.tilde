@@ -88,6 +88,7 @@ alias mkm = cd ~/MARYKATEMAS/
 alias wm = workmux
 alias k = kubectl
 alias tf = terraform
+alias prp = purple
 
 source direnv.nu
 
