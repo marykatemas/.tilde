@@ -37,6 +37,8 @@
     htop
     imagemagick
     jq
+    yq
+    fq
     just
     k9s
     kubectx
@@ -71,7 +73,6 @@
     wget
     xh
     yazi
-    yq
     zoxide
     zsh
     # zsh-autosuggestions
