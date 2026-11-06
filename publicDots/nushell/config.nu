@@ -67,6 +67,14 @@ def outd [] {
         print "\n=== mas outdated ===\n"
         mas outdated
     }
+    if (which uv | is-not-empty) {
+        print "\n=== uv tool list --outdated ===\n"
+        uv tool list --outdated
+    }
+    if (which npm | is-not-empty) {
+        print "\n=== npm outdated -g ===\n"
+        npm outdated -g
+    }
 }
 
 alias v = nvim
