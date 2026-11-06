@@ -50,9 +50,7 @@
       orientation = "bottom";
       tilesize = 32;
 
-      persistent-apps = [
-        {app = "/System/Applications/iPhone Mirroring.app";}
-      ];
+      persistent-apps = [];
       persistent-others = [
         {
           folder = {
