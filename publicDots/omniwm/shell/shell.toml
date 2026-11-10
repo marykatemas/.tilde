@@ -1,0 +1,16 @@
+
+[profiles]
+
+[profiles.default]
+center = ["active-window", "omniwm", "workspaces", "system-stats", "scratchpads"]
+leading = []
+trailing = []
+
+[profiles.default.workspaceBar]
+autoHide = true
+fullWidth = false
+height = 24.0
+position = "belowMenuBar"
+reserveLayoutSpace = false
+revealModifier = "option"
+transparentBackground = true

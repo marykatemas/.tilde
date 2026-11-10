@@ -1,9 +1,4 @@
-monitorBarOverrides = []
-monitorDwindleOverrides = []
-monitorGapOverrides = []
-monitorNiriOverrides = []
-monitorOrientationOverrides = []
-schemaVersion = 4
+schemaVersion = 5
 
 [appearance]
 mode = "dark"
@@ -36,7 +31,9 @@ useGlobalGaps = true
 
 [focus]
 crossesMonitorAtEdge = true
+edgeNavigationInterval = 1.5
 followsMouse = false
+followsMouseOnlyFullyVisible = false
 followsWindowToMonitor = true
 lockModifier = "off"
 moveCrossesMonitorAtEdge = true
@@ -63,14 +60,20 @@ ipcEnabled = true
 preventSleepEnabled = false
 systemHyperTrigger = "None"
 updateChecksEnabled = true
+workspaceAutoBackAndForth = false
 
 [gestures]
+adoptNativeMoveAcrossDisplays = false
+adoptNativeResize = false
+dwindleGroupDragAcrossDisplays = "group"
 fingerCount = 3
 invertDirection = true
 mouseMoveModifierKey = "option"
 mouseResizeModifierKey = "option"
+mouseWheelSensitivity = 1.0
 overviewGestureEnabled = false
 overviewGestureFingerCount = 4
+resizePreviewStyle = "live"
 scrollEnabled = true
 scrollModifierKey = "optionShift"
 scrollSensitivity = 5.0
@@ -81,6 +84,7 @@ windowMoveFingerCount = 4
 windowResizeEnabled = false
 windowResizeFingerCount = 3
 workspaceSwipeAxis = "vertical"
+workspaceSwipeEdgeBehavior = "cycle"
 workspaceSwipeEnabled = false
 workspaceSwipeFingerCount = 3
 
@@ -89,18 +93,34 @@ enabled = false
 hiddenBundleIDs = []
 rehideIntervalSeconds = 5.0
 
+[island]
+enabled = false
+
+[keyboardModes]
+
+[launcher]
+appFolders = []
+cliFolders = []
+entries = []
+shell = "system"
+shellExecutable = ""
+terminal = "terminal"
+
 [mouseWarp]
 constrainToArrangement = false
 enabled = true
 margin = 1
 
 [niri]
+allowOverscroll = false
 alwaysCenterSingleColumn = true
 centerFocusedColumn = "never"
 containerPrimarySpanPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
 defaultContainerPrimarySpan = 0.5
 edgeGaps = true
 infiniteLoop = false
+moveWindowStacksIntoColumn = true
+overscrollVisibleStripPercent = 5
 resizeStepPercent = 5
 singleWindowFit = "fill"
 visibleContainerCount = 2
@@ -148,35 +168,45 @@ heightPercent = 75.0
 monitorMode = "focusedWindow"
 opacity = 0.75
 position = "center"
+provider = "ghostty"
 widthPercent = 75.0
 
 [routing]
-mode = "custom"
-
-[[routing.arrangements]]
-id = "3EA568C9-BF97-43B7-9820-4C92FD0649BE"
-
-[[routing.arrangements.monitors]]
-gridColumn = 0
-gridRow = 0
-monitorDisplayUUID = "1B82079A-6D80-4E70-9D2E-62F8C54B9027"
-monitorName = "S23C200"
-
-[[routing.arrangements.monitors]]
-gridColumn = 1
-gridRow = 0
-monitorDisplayUUID = "37D8832A-2D66-02CA-B9F7-8F30A301B230"
-monitorName = "Built-in Retina Display"
+arrangements = []
+mode = "macOS"
 
 [scratchpads]
 
 [scratchpads.labels]
+
+[shellPermissions]
+programs = []
+widgets = []
+
+[shellPermissions.services]
+lyrics = false
+weather = false
 
 [statusBar]
 showAppNames = false
 showIcon = true
 showWorkspaceName = false
 useWorkspaceId = false
+
+[statusMenu]
+hiddenControls = []
+hiddenMenuItems = []
+showControlHelp = true
+showControls = true
+showMenuItems = true
+
+[windowSwitcher]
+commandTab = "activeWorkspace"
+enabled = false
+optionTab = "allWorkspaces"
+order = "omniLayout"
+scope = "allWorkspaces"
+showFooter = true
 
 [workspaceBar]
 autoHide = false
@@ -186,6 +216,8 @@ backgroundOpacity = 0.1
 deduplicateAppIcons = true
 enabled = true
 excludedBundleIDs = []
+fullWidth = false
+fullWidthNotchMode = "rightOfNotch"
 height = 24.0
 hideEmptyWorkspaces = true
 hideInNativeFullscreen = false
@@ -197,7 +229,7 @@ notificationBadges = "off"
 position = "overlappingMenuBar"
 reserveLayoutSpace = false
 revealHoldMilliseconds = 200.0
-revealModifier = "option"
+revealModifier = "off"
 showAccentHighlights = true
 showFloatingWindows = true
 showItemBackgrounds = true
@@ -290,11 +322,11 @@ minHeight = 320.0
 minWidth = 660.0
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+S"
 id = "toggleScratchpad.1"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Shift+S"
 id = "assignFocusedWindowToScratchpad.1"
 
 [[hotkeys]]
@@ -911,27 +943,27 @@ id = "resetWindowSecondarySpan"
 
 [[hotkeys]]
 binding = "Option+Minus"
-id = "setContainerPrimarySpan.decrease10Percent"
+id = "resizeContainerPrimarySpan.shrink"
 
 [[hotkeys]]
 binding = "Option+Equal"
-id = "setContainerPrimarySpan.increase10Percent"
+id = "resizeContainerPrimarySpan.grow"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "setWindowPrimarySpan.decrease10Percent"
+id = "resizeWindowPrimarySpan.shrink"
 
 [[hotkeys]]
 binding = "Unassigned"
-id = "setWindowPrimarySpan.increase10Percent"
+id = "resizeWindowPrimarySpan.grow"
 
 [[hotkeys]]
 binding = "Option+Shift+Minus"
-id = "setWindowSecondarySpan.decrease10Percent"
+id = "resizeWindowSecondarySpan.shrink"
 
 [[hotkeys]]
 binding = "Option+Shift+Equal"
-id = "setWindowSecondarySpan.increase10Percent"
+id = "resizeWindowSecondarySpan.grow"
 
 [[hotkeys]]
 binding = "Option+Shift+B"
@@ -994,8 +1026,80 @@ binding = "Unassigned"
 id = "preselectClear"
 
 [[hotkeys]]
+binding = "Unassigned"
+id = "volumeUp"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "volumeDown"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "volumeMute"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "mediaPlayPause"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "mediaNext"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "mediaPrevious"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleShortcutPause"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "beginPrefix"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleWindowMode"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "exitKeyboardMode"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openShellApp.example"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "newShellAppWindow.example"
+
+[[hotkeys]]
 binding = "Control+Option+Space"
 id = "openCommandPalette"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openCommandPalette.windows"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openCommandPalette.menu"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openCommandPalette.clipboard"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openCommandPalette.commands"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openCommandPalette.applications"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "openCommandPalette.files"
 
 [[hotkeys]]
 binding = "Option+Shift+R"
@@ -1053,8 +1157,19 @@ id = "toggleOverview"
 binding = "Unassigned"
 id = "toggleSystemStats"
 
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleShellWidget.hidden-bar"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleShellWidget.system-stats"
+
+[[hotkeys]]
+binding = "Unassigned"
+id = "toggleShellWidget.workspaces"
+
 [[workspaces]]
-displayName = ""
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
 layoutType = "niri"
 name = "1"
@@ -1063,7 +1178,6 @@ name = "1"
 type = "main"
 
 [[workspaces]]
-displayName = ""
 id = "454CECD4-5E9D-4ED1-95D7-979D48817F5F"
 layoutType = "niri"
 name = "2"
@@ -1072,7 +1186,6 @@ name = "2"
 type = "main"
 
 [[workspaces]]
-displayName = ""
 id = "BEB842B5-E894-4791-9FD1-397C3CDD3538"
 layoutType = "niri"
 name = "3"
@@ -1081,7 +1194,6 @@ name = "3"
 type = "main"
 
 [[workspaces]]
-displayName = ""
 id = "248AA883-2261-4D45-943C-79C0E46A232B"
 layoutType = "niri"
 name = "4"
@@ -1090,7 +1202,6 @@ name = "4"
 type = "main"
 
 [[workspaces]]
-displayName = ""
 id = "8B8C45D6-CE9E-41D9-BD50-BE4989D5E3DE"
 layoutType = "niri"
 name = "5"
@@ -1099,7 +1210,6 @@ name = "5"
 type = "main"
 
 [[workspaces]]
-displayName = ""
 id = "5953F2BF-A378-4266-91B2-287174C4FA4D"
 layoutType = "niri"
 name = "6"
@@ -1108,7 +1218,6 @@ name = "6"
 type = "secondary"
 
 [[workspaces]]
-displayName = ""
 id = "A7D5E104-6985-4516-8ED5-07F144F2A33D"
 layoutType = "niri"
 name = "7"
@@ -1117,7 +1226,6 @@ name = "7"
 type = "secondary"
 
 [[workspaces]]
-displayName = ""
 id = "0E18F6B0-345A-4078-8B21-33641F07A861"
 layoutType = "niri"
 name = "8"
@@ -1126,7 +1234,6 @@ name = "8"
 type = "secondary"
 
 [[workspaces]]
-displayName = ""
 id = "8D4D711C-2B2F-4FEC-86BF-FA952037738A"
 layoutType = "niri"
 name = "9"

@@ -5,6 +5,10 @@ set -euo pipefail
 symlink() {
 	local src="$1"
 	local dst="$2"
+	if [ ! -e "$src" ]; then
+		echo "  [skip] $src"
+		return 0
+	fi
 	src="$(cd "$(dirname "$src")" && pwd)/$(basename "$src")"
 	if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
 		return 0
@@ -63,6 +67,7 @@ symlink "$HOME/.tilde/publicDots/yazi" "$HOME/.config/yazi"
 symlink "$HOME/.tilde/publicDots/workmux" "$HOME/.config/workmux"
 symlink "$HOME/.tilde/publicDots/direnv" "$HOME/.config/direnv"
 symlink "$HOME/.tilde/publicDots/sesh" "$HOME/.config/sesh"
+symlink "$HOME/.tilde/publicDots/purple" "$HOME/.config/purple"
 
 symlink "$HOME/.tilde/privateDots/obsidian-wiki" "$HOME/.config/obsidian-wiki"
 symlink "$HOME/.tilde/privateDots/SSH" "$HOME/.ssh"

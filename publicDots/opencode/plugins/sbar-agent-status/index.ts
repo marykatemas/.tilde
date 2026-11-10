@@ -2,7 +2,7 @@ import { spawn } from "node:child_process"
 import { Plugin } from "@opencode/plugin"
 
 const SB = "/opt/homebrew/bin/sketchybar"
-const ITEMS = ["agent", "agent_center"] as const
+const ITEMS = ["agent"] as const
 const DONE_MS = 5000
 
 const STATES = {

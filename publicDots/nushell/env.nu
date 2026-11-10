@@ -17,13 +17,17 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 
+$env.HOME = $nu.home-dir
+
 # https://specifications.freedesktop.org/basedir/latest/
-$env.XDG_CONFIG_HOME = ($env.HOME | path join ".config")
-$env.XDG_DATA_HOME = ($env.HOME | path join ".local" "share")
-$env.XDG_STATE_HOME = ($env.HOME | path join ".local" "state")
-$env.XDG_CACHE_HOME = ($env.HOME | path join ".cache")
-$env.XDG_CONFIG_DIRS = "/etc/xdg"
-$env.XDG_DATA_DIRS = "/usr/local/share:/usr/share"
+if $nu.os-info.name != "windows" {
+    $env.XDG_CONFIG_HOME = ($env.HOME | path join ".config")
+    $env.XDG_DATA_HOME = ($env.HOME | path join ".local" "share")
+    $env.XDG_STATE_HOME = ($env.HOME | path join ".local" "state")
+    $env.XDG_CACHE_HOME = ($env.HOME | path join ".cache")
+    $env.XDG_CONFIG_DIRS = "/etc/xdg"
+    $env.XDG_DATA_DIRS = "/usr/local/share:/usr/share"
+}
 
 # $env.XDG_RUNTIME_DIR = $"/run/user/(id -u)"
 

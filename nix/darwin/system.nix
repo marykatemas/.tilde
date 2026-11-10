@@ -38,6 +38,8 @@
       NSAutomaticSpellingCorrectionEnabled = false;
       NSAutomaticInlinePredictionEnabled = false;
 
+      AppleShowAllFiles = true;
+
       NSNavPanelExpandedStateForSaveMode = true;
       NSNavPanelExpandedStateForSaveMode2 = true;
 

@@ -38,7 +38,7 @@ cask "nikitabobko/tap/aerospace", trusted: true
 cask "bettercmdtab"
 # Display management tool
 cask "betterdisplay"
-# Desktop password and login vault
+# Open source desktop password manager with encrypted vault and autofilling
 cask "bitwarden"
 # Voice and text chat software
 cask "discord"
@@ -57,6 +57,8 @@ cask "keycastr"
 cask "kindavim"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
+# Keyboard configurator for NuPhy devices
+cask "nuphyio"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -69,6 +71,8 @@ cask "onlyoffice"
 cask "opensuperwhisper"
 # Replacement for Docker Desktop
 cask "orbstack"
+# Remote desktop
+cask "parsec"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Build, run, and govern agents across the software development lifecycle

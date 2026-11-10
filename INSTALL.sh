@@ -38,11 +38,11 @@ git-crypt unlock "$KEY" &&
 git submodule update --init --recursive
 '
 
-bash ~/.tilde/scripts/symlinks.sh
-
 mkdir -p "$HOME/MARYKATEMAS"
 mkdir -p "$HOME/Active"
 mkdir -p "$HOME/Inactive"
+
+bash ~/.tilde/scripts/symlinks.sh
 
 if [[ "$(uname -s)" == Darwin ]]; then
 	sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.tilde/nix#Larptop
@@ -88,4 +88,8 @@ fi
 
 if command -v hunk && command -v npx; then
 	npx skills add modem-dev/hunk -g --skill hunk-review
+fi
+
+if command -v pwsh; then
+	pwsh -NoProfile -Command 'if (-not (Get-Module -ListAvailable PSScriptAnalyzer)) { Install-Module PSScriptAnalyzer -Scope CurrentUser -Force }'
 fi

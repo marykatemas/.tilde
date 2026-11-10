@@ -92,6 +92,11 @@
     rip2
     tork
     ouch
+    rar
     navi
+    tailscale
+    powershell
+    # sunshine
+    # moonlight-qt
   ];
 }

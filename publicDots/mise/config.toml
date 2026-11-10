@@ -10,10 +10,10 @@ bun = "latest"
 solidity = "latest"
 foundry = "latest"
 # neovim = "nightly"
-workmux = "latest"
-pre-commit = "latest"
+workmux = { version = "latest", os = ["macos", "linux"] }
+pre-commit = { version = "latest", os = ["macos", "linux"] }
 hunk = "latest"
-opencode = "2"        # "latest" resolves to the GitHub latest release (still 1.x); "2" tracks newest 2.x
+opencode = "2"
 pi = "latest"
 dua = "latest"
 llmfit = "latest"
