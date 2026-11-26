@@ -5,7 +5,7 @@ import subprocess
 
 SB = "/opt/homebrew/bin/sketchybar"
 MEDIA = "/opt/homebrew/bin/media-control"
-ITEMS = ("media",)
+ITEMS = ("media", "media.external")
 
 STATES = {
     True: ("􀑪", "0xff8e8e93", "0xf2ffffff"),

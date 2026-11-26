@@ -10,7 +10,7 @@ pkill -f "$SB_DIR/media.py stream" 2>/dev/null || true
 "$SB" --bar \
 	topmost=window \
 	height=39 \
-	notch_width=300 \
+	notch_width=310 \
 	color=0x00000000 \
 	drawing=off
 
@@ -28,8 +28,16 @@ pkill -f "$SB_DIR/media.py stream" 2>/dev/null || true
 	background.height=24 \
 	drawing=off
 
-"$SB" --add item media q
-"$SB" --add item agent e
+"$SB" --add item media q \
+	--set media display=1
+"$SB" --add item media.external center \
+	--set media.external display=2,3,4,5,6,7,8,9 y_offset=5
+
+"$SB" --add item agent e \
+	--set agent display=1
+"$SB" --add item agent.external center \
+	--set agent.external display=2,3,4,5,6,7,8,9 y_offset=5
+
 "$SB" --set /media/ label.max_chars=35
 "$SB" --set /agent/ drawing=on icon=󰚩 icon.color=0x598e8e93 label=i label.color=0x9effffff
 

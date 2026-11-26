@@ -99,7 +99,10 @@ Key flags:
 - `-e, --prompt-editor`: write prompt in $EDITOR
 - `-A, --auto-name`: generate branch name from prompt via LLM
 - `-a <agent>`: override the agent (can specify multiple for multi-worktree)
-- `-w, --with-changes`: move uncommitted changes to the new worktree
+- `-w, --with-changes`: move uncommitted changes to the new worktree, which
+  starts from the current HEAD; `-u` adds untracked files, `--patch` picks hunks (not with `-u` or staged changes). A stash backup remains after transfer.
+  Works with `-p`/`-P`/`-e`/`-A` and a single `-a`; rejects `--base`, `--pr` and
+  stdin input
 - `--base <branch>`: branch from a specific base
 - `--name <name>`: override the worktree handle
 - `--target-name <name>`: override the workmux-managed tmux window or session name
@@ -122,9 +125,10 @@ starting an agent. No running multiplexer is required. `--json` requires
 `--headless` and returns one JSON receipt with the handle, worktree path,
 and effective working directory; hook output goes to stderr.
 
-Use an explicit local branch name. Supports `--base`, `--name`, `--no-hooks`,
-and `--no-file-ops`, but not PR checkout, prompts, `--background`, or other
-mux/agent options. Worktrees persist until removed: clean up with
+Use an explicit local branch name, or `--pr <number|url>` to check out a PR
+(the branch name is then optional). Supports `--base`, `--name`, `--no-hooks`,
+and `--no-file-ops`, but not prompts, `--background`, or other mux/agent
+options. Worktrees persist until removed: clean up with
 `workmux remove <handle>` or attach a window later with `workmux open <handle>`.
 
 ### List worktrees
@@ -199,11 +203,33 @@ workmux send agent-a "fix the tests"    # short message
 workmux send agent-a "/merge"           # send a skill command
 workmux send agent-a -f followup.md     # from file
 workmux send myproject:docs "update the API section"  # cross-project
+workmux send %42 "fix the tests"        # by pane ID (worktrees with several agents)
+workmux send --wait agent-a "fix it"    # confirm delivery, wait for done/waiting
+workmux send --wait --until working agent-a "fix it"  # delivery confirmation only
+workmux send --wait --timeout 600 agent-a -f task.md  # give up after 10 min
 
 # Run shell commands in an agent's worktree
 workmux run agent-a -- pytest tests/    # wait and stream output
 workmux run agent-a -b -- npm run build # run in background
 ```
+
+`send` refuses an agent waiting on a dialog (Enter would answer it) and a
+worktree with several agents; target one of those by the pane ID that
+`workmux status --json` shows. Failures print a stable error name and exit with
+its code:
+
+| Error                  | Exit | Meaning                                                |
+| ---------------------- | ---- | ------------------------------------------------------ |
+| `agent_waiting`        | 3    | Agent is waiting on a dialog; nothing sent             |
+| `ambiguous_target`     | 4    | Target matches several agents; pane IDs listed         |
+| `agent_not_found`      | 5    | No live agent for the target                           |
+| `send_stalled`         | 6    | `--wait`: idle agent showed no activity within 5s      |
+| `agent_gone`           | 7    | `--wait`: agent exited before its turn settled         |
+| `agent_status_unknown` | 8    | `--wait` on an agent with no reported status; not sent |
+| `timeout`              | 124  | `--wait --timeout` expired                             |
+
+After a `send`, `workmux wait` counts only the agent sent to and only states of
+the turn the send started.
 
 ### Other commands
 
